@@ -1,0 +1,150 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe4f1, #eee0ff, #fff0f7);
+    color: #754477;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.page {
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 30px;
+    color: #a64d91;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #9260bb;
+    font-size: 15px;
+    margin-bottom: 22px;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid #e5c7ff;
+    border-radius: 28px;
+    padding: 22px;
+    box-shadow: 0 12px 30px rgba(151, 91, 172, 0.18);
+}
+
+.display-box {
+    background: #f1e4ff;
+    border: 2px solid #d7b8ff;
+    border-radius: 18px;
+    padding: 8px 12px;
+    margin-bottom: 14px;
+}
+
+#display {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #623b91;
+    font-size: 32px;
+    text-align: right;
+    padding: 10px 0;
+}
+
+#message {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff0fa;
+    border-radius: 14px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 14px 0 18px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+button {
+    min-width: 0;
+    border: none;
+    border-radius: 16px;
+    padding: 15px 4px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: inherit;
+    color: #754477;
+    cursor: pointer;
+    box-shadow: 0 4px 0 rgba(128, 72, 145, 0.13);
+    transition: transform 0.12s, filter 0.12s;
+}
+
+button:hover {
+    filter: brightness(1.04);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.number {
+    background: #ffc5e2;
+}
+
+.operator {
+    background: #d6b9ff;
+}
+
+.equals {
+    background: #f56ab8;
+    color: white;
+}
+
+.clear {
+    background: #a978e8;
+    color: white;
+    grid-column: span 2;
+    font-size: 16px;
+}
+
+.backspace {
+    background: #e5d3ff;
+    grid-column: span 2;
+    font-size: 16px;
+}
+
+footer {
+    margin-top: 20px;
+    color: #9569b3;
+    font-size: 13px;
+}
+
+@media (max-width: 380px) {
+    .calculator {
+        padding: 14px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    button {
+        padding: 13px 2px;
+    }
+}
